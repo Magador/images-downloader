@@ -1,0 +1,26 @@
+{
+  "name": "images-downloader",
+  "version": "1.0.0",
+  "description": "Download images from pattern into a local folder.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Magador/images-downloader.git"
+  },
+  "keywords": [
+    "image",
+    "download"
+  ],
+  "author": "Jean-Baptiste LENGLET <jbaptiste.lenglet+git@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/Magador/images-downloader/issues"
+  },
+  "homepage": "https://github.com/Magador/images-downloader",
+  "dependencies": {
+    "downloader": "^0.1.2"
+  }
+}
