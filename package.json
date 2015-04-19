@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/Magador/images-downloader",
   "dependencies": {
-    "downloader": "^0.1.2"
+    "downloader": "^0.1.2",
+    "htmlparser2": "^3.8.2"
   }
 }
