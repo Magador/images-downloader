@@ -10,9 +10,22 @@ var requestPool = {
     currents: [],
     size: 5,
     add: function(url) {
-        if(url instanceof Array) {
+        if(Array.isArray(url)) {
             url.forEach(function (val) {
                 requestPool.add(val);
+            });
+        }
+        if(typeof url === 'string') {
+            requestPool.requests.push({
+                url: url,
+                done: false
+            });
+        }
+    },
+    remove: function(url) {
+        if(Array.isArray(url)) {
+            var removingUrls = url.filter(function(val) {
+                return true;
             });
         }
         if(typeof url === 'string') {
