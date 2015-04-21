@@ -1,43 +1,14 @@
 /**
- * Created by Magador on 18/04/2015.
+ * Created by Magador on 21/04/2015.
  */
 
-var downloader = require('downloader'),
-    htmlparser = require('htmlparser2');
+var requestPool = new (require('./request-pool'))(),
+    util = require('util');
 
-var requestPool = {
-    requests: [],
-    currents: [],
-    size: 5,
-    add: function(url) {
-        if(Array.isArray(url)) {
-            url.forEach(function (val) {
-                requestPool.add(val);
-            });
-        }
-        if(typeof url === 'string') {
-            requestPool.requests.push({
-                url: url,
-                done: false
-            });
-        }
-    },
-    remove: function(url) {
-        if(Array.isArray(url)) {
-            var removingUrls = url.filter(function(val) {
-                return true;
-            });
-        }
-        if(typeof url === 'string') {
-            requestPool.requests.push({
-                url: url,
-                done: false
-            });
-        }
-    }
-
-};
 
 module.exports = function(links, selector, directory) {
-
+    requestPool.add(['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h', 'i', 'j', 'k', 'l', 'm', 'n']);
+    console.log(requestPool.remove(['o', 'p', 'q']));
 };
+
+module.exports();
