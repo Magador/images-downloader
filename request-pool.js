@@ -2,8 +2,7 @@
  * Created by Magador on 18/04/2015.
  */
 
-var downloader = require('downloader'),
-    htmlparser = require('htmlparser2'),
+var request = require('request'),
     util = require('util');
 
 var RequestPool = function(opts) {
@@ -49,6 +48,9 @@ RequestPool.prototype.contains = function (url) {
     return -1;
 };
 RequestPool.prototype.execute = function(callback) {
+    request()
+    //Set and call currents
+    // Execute callback when response
 
 };
 
