@@ -47,10 +47,15 @@ RequestPool.prototype.contains = function (url) {
             return i;
     return -1;
 };
-RequestPool.prototype.execute = function(callback) {
+RequestPool.prototype.play = function(callback) {
     request()
     //Set and call currents
     // Execute callback when response
+};
+RequestPool.prototype.pause = function() {
+
+};
+RequestPool.prototype.resume = function () {
 
 };
 
