@@ -3,6 +3,7 @@
  */
 
 var request = require('request'),
+    async = require('async'),
     util = require('util');
 
 var RequestPool = function(opts) {
